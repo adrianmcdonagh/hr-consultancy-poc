@@ -1,55 +1,30 @@
-// Motion and scroll behavior
-// Respects prefers-reduced-motion
+document.addEventListener("DOMContentLoaded", function () {
+  const elements = document.querySelectorAll(".reveal");
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-(function() {
-  'use strict';
+  if (!elements.length) return;
 
-  // Check user's motion preference
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  // Header scroll behavior - add shadow when scrolled
-  const header = document.querySelector('header');
-  if (header) {
-    function handleHeaderScroll() {
-      if (window.scrollY > 10) {
-        header.classList.add('header-scrolled');
-      } else {
-        header.classList.remove('header-scrolled');
-      }
-    }
-
-    window.addEventListener('scroll', handleHeaderScroll, { passive: true });
-    handleHeaderScroll(); // Check on load
+  if (prefersReducedMotion) {
+    elements.forEach((el) => el.classList.add("is-visible"));
+    return;
   }
 
-  // Scroll reveal for sections
-  if (!prefersReducedMotion) {
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
+  const observer = new IntersectionObserver(
+    function (entries, observer) {
+      entries.forEach(function (entry) {
         if (entry.isIntersecting) {
-          entry.target.classList.add('revealed');
-          // Optionally unobserve after revealing
+          entry.target.classList.add("is-visible");
           observer.unobserve(entry.target);
         }
       });
-    }, observerOptions);
+    },
+    {
+      threshold: 0.15,
+      rootMargin: "0px 0px -8% 0px"
+    }
+  );
 
-    // Observe all elements with data-reveal attribute
-    const revealElements = document.querySelectorAll('[data-reveal]');
-    revealElements.forEach(el => {
-      el.classList.add('reveal-hidden');
-      observer.observe(el);
-    });
-  } else {
-    // If user prefers reduced motion, show everything immediately
-    const revealElements = document.querySelectorAll('[data-reveal]');
-    revealElements.forEach(el => {
-      el.classList.add('revealed');
-    });
-  }
-})();
+  elements.forEach(function (el) {
+    observer.observe(el);
+  });
+});
