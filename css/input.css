@@ -6,18 +6,150 @@
   body {
     @apply text-midnight-violet-900 bg-white;
   }
+
+  /* Enhanced focus states */
+  *:focus-visible {
+    @apply outline-2 outline-offset-2 outline-slate-blue-600;
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    @apply outline-2 outline-offset-2 outline-slate-blue-600;
+  }
 }
 
 @layer components {
+  /* Premium header with glass effect */
+  header {
+    @apply bg-white/90 backdrop-blur-md transition-shadow duration-300;
+  }
+
+  header.header-scrolled {
+    @apply shadow-md;
+  }
+
+  /* Enhanced button styles with lift and shadow */
   .btn-primary {
-    @apply inline-block px-6 py-3 bg-slate-blue-600 text-white font-semibold rounded-lg hover:bg-slate-blue-700 transition-colors duration-200;
+    @apply inline-block px-6 py-3 bg-slate-blue-600 text-white font-semibold rounded-lg
+           shadow-sm hover:shadow-md hover:-translate-y-0.5
+           transition-all duration-200 ease-out;
   }
 
   .btn-secondary {
-    @apply inline-block px-6 py-3 bg-white text-slate-blue-600 font-semibold border-2 border-slate-blue-600 rounded-lg hover:bg-slate-blue-50 transition-colors duration-200;
+    @apply inline-block px-6 py-3 bg-transparent text-slate-blue-700 font-semibold
+           border-2 border-slate-blue-600 rounded-lg
+           hover:bg-slate-blue-50 hover:shadow-sm hover:-translate-y-0.5
+           transition-all duration-200 ease-out;
   }
 
   .container-custom {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Service cards with refined hover */
+  .service-card {
+    @apply bg-white p-6 rounded-lg border border-transparent
+           shadow-sm hover:shadow-lg hover:-translate-y-1 hover:border-slate-blue-200
+           transition-all duration-300 ease-out;
+  }
+
+  /* Scroll reveal animations */
+  .reveal-hidden {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  .revealed {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  /* Respect reduced motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+
+    .reveal-hidden,
+    .revealed {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+
+    header,
+    .btn-primary,
+    .btn-secondary,
+    .service-card {
+      transition: none;
+    }
+  }
+
+  /* Styled details/summary for FAQs */
+  details {
+    @apply bg-midnight-violet-50 rounded-lg p-6 transition-all duration-200;
+  }
+
+  details[open] {
+    @apply shadow-sm;
+  }
+
+  summary {
+    @apply font-semibold text-lg text-midnight-violet-900 cursor-pointer
+           list-none flex items-center justify-between
+           focus-visible:outline-2 focus-visible:outline-slate-blue-600;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  summary::after {
+    content: '+';
+    @apply text-2xl text-slate-blue-600 font-bold ml-4 transition-transform duration-200;
+  }
+
+  details[open] summary::after {
+    content: '−';
+  }
+
+  /* Numbered step circles */
+  .step-number {
+    @apply w-16 h-16 bg-slate-blue-600 text-white rounded-full
+           flex items-center justify-center text-2xl font-bold
+           shadow-sm;
+  }
+
+  /* Learn more links with arrow */
+  .learn-more-link {
+    @apply inline-flex items-center gap-1.5 text-slate-blue-600 font-medium
+           hover:text-slate-blue-700 hover:gap-2 transition-all duration-200;
+  }
+}
+@layer utilities {
+  .reveal {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 700ms ease, transform 700ms ease;
+    will-change: opacity, transform;
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal,
+    .reveal.is-visible {
+      transition: none;
+      transform: none;
+      opacity: 1;
+    }
   }
 }

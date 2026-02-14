@@ -16,7 +16,8 @@
   <!-- Canonical URL -->
   <link rel="canonical" href="https://example.co.uk">
 
-  <link rel="stylesheet" href="./css/output.css">
+  <!-- IMPORTANT: Netlify publishes from /deploy, so use absolute paths -->
+  <link rel="stylesheet" href="/css/output.css">
 </head>
 <body class="antialiased">
 
@@ -64,8 +65,8 @@
   </header>
 
   <main>
-    <!-- Hero Section -->
-    <section class="relative bg-gradient-to-br from-midnight-violet-50 via-slate-blue-50 to-soft-periwinkle-50 py-20 md:py-28 lg:py-32">
+    <!-- Hero Section (reveal enabled) -->
+    <section class="reveal relative bg-gradient-to-br from-midnight-violet-50 via-slate-blue-50 to-soft-periwinkle-50 py-20 md:py-28 lg:py-32">
       <div class="container-custom">
         <div class="max-w-4xl">
           <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-midnight-violet-900 mb-8 leading-tight">
@@ -86,8 +87,8 @@
       </div>
     </section>
 
-    <!-- Why Choose Us Section -->
-    <section class="py-16 md:py-20 bg-white">
+    <!-- Why Choose Us Section (reveal enabled) -->
+    <section class="reveal py-16 md:py-20 bg-white">
       <div class="container-custom">
         <div class="max-w-4xl mx-auto text-center">
           <h2 class="text-3xl md:text-4xl font-bold text-midnight-violet-900 mb-6">Why Choose Us</h2>
@@ -279,7 +280,7 @@
               Can you help with disciplinaries and grievances?
             </summary>
             <p class="mt-4 text-midnight-violet-700">
-              Yes. We provide comprehensive support for all employee relations matters, including disciplinaries, grievances, investigations, and capability issues. We guide you through fair process, help with documentation, attend meetings if needed, and ensure legal compliance throughout.
+              Yes. We provide comprehensive support for all employee relations matters, including disciplinaries, grievances, investigations, and absence issues. We guide you through fair process, help with documentation, attend meetings if needed, and ensure legal compliance throughout.
             </p>
           </details>
 
@@ -288,7 +289,7 @@
               Do you create contracts and handbooks?
             </summary>
             <p class="mt-4 text-midnight-violet-700">
-              Absolutely. We create bespoke employment contracts, handbooks, and HR policies tailored to your business. These aren't generic templates – they reflect your culture, commercial needs, and legal requirements, giving you compliant documentation that actually works for your organisation.
+              Absolutely. We create bespoke employment contracts, handbooks, and HR policies tailored to your business. These aren't generic templates, they reflect your culture, commercial needs, and legal requirements, giving you compliant documentation that actually works for your organisation.
             </p>
           </details>
 
@@ -402,5 +403,7 @@
     });
   </script>
 
+  <!-- IMPORTANT: Netlify publishes from /deploy, so use absolute path -->
+  <script src="/js/motion.js" defer></script>
 </body>
 </html>
