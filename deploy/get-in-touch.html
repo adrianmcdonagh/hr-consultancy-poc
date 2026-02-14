@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get in Touch | Contact Our HR Consultancy Team</title>
+  <meta name="description" content="Contact our HR consultancy team. Send us a message about your HR needs and we'll respond within one business day.">
+  <meta name="keywords" content="contact HR consultant, HR enquiry, get in touch, HR support contact">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Get in Touch with Our HR Team">
+  <meta property="og:description" content="Contact our HR consultancy team for expert support with your people management needs.">
+  <meta property="og:url" content="https://example.co.uk/get-in-touch">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://example.co.uk/get-in-touch">
+
+  <link rel="stylesheet" href="./css/output.css">
+</head>
+<body class="antialiased">
+
+  <!-- Header -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <nav class="container-custom py-4" aria-label="Main navigation">
+      <div class="flex items-center justify-between">
+        <div class="text-xl font-bold text-slate-blue-600">
+          <a href="./index.html" aria-label="HR Solutions home">HR Solutions</a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <button
+          id="mobile-menu-btn"
+          class="md:hidden p-2 text-midnight-violet-700 hover:text-slate-blue-600"
+          aria-expanded="false"
+          aria-label="Toggle navigation menu"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+
+        <!-- Desktop navigation -->
+        <ul class="hidden md:flex items-center space-x-8">
+          <li><a href="./index.html" class="text-midnight-violet-700 hover:text-slate-blue-600">Home</a></li>
+          <li><a href="./services.html" class="text-midnight-violet-700 hover:text-slate-blue-600">Services</a></li>
+          <li><a href="./about.html" class="text-midnight-violet-700 hover:text-slate-blue-600">About</a></li>
+          <li><a href="./team.html" class="text-midnight-violet-700 hover:text-slate-blue-600">Team</a></li>
+          <li><a href="./book-a-call.html" class="btn-primary">Book a Call</a></li>
+          <li><a href="./get-in-touch.html" class="text-slate-blue-600 font-semibold hover:text-slate-blue-700" aria-current="page">Get in Touch</a></li>
+        </ul>
+      </div>
+
+      <!-- Mobile navigation -->
+      <ul id="mobile-menu" class="hidden md:hidden mt-4 space-y-3">
+        <li><a href="./index.html" class="block py-2 text-midnight-violet-700 hover:text-slate-blue-600">Home</a></li>
+        <li><a href="./services.html" class="block py-2 text-midnight-violet-700 hover:text-slate-blue-600">Services</a></li>
+        <li><a href="./about.html" class="block py-2 text-midnight-violet-700 hover:text-slate-blue-600">About</a></li>
+        <li><a href="./team.html" class="block py-2 text-midnight-violet-700 hover:text-slate-blue-600">Team</a></li>
+        <li><a href="./book-a-call.html" class="block py-2 text-midnight-violet-700 hover:text-slate-blue-600">Book a Call</a></li>
+        <li><a href="./get-in-touch.html" class="block py-2 text-slate-blue-600 font-semibold">Get in Touch</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-midnight-violet-50 via-slate-blue-50 to-soft-periwinkle-50 py-20 md:py-28 lg:py-32">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-midnight-violet-900 mb-8 leading-tight">
+            Get in Touch
+          </h1>
+          <p class="text-xl md:text-2xl text-midnight-violet-700 leading-relaxed max-w-3xl mx-auto">
+            Have a question or want to discuss your HR needs? Send us a message and we'll respond within one business day.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form and Details Section -->
+    <section class="py-16 md:py-20 bg-white">
+      <div class="container-custom">
+        <div class="max-w-5xl mx-auto">
+
+          <div class="grid lg:grid-cols-2 gap-12">
+
+            <!-- Left Column: Contact Form -->
+            <div>
+              <h2 class="text-2xl font-bold text-midnight-violet-900 mb-6">Send Us a Message</h2>
+
+              <!-- Contact Form Placeholder -->
+              <form class="space-y-6" action="#" method="POST">
+
+                <div>
+                  <label for="name" class="block text-sm font-semibold text-midnight-violet-900 mb-2">
+                    Name <span class="text-red-600">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    class="w-full px-4 py-3 border border-pale-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-blue-500 focus:border-transparent"
+                    placeholder="Your full name"
+                  >
+                </div>
+
+                <div>
+                  <label for="email" class="block text-sm font-semibold text-midnight-violet-900 mb-2">
+                    Email <span class="text-red-600">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    class="w-full px-4 py-3 border border-pale-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-blue-500 focus:border-transparent"
+                    placeholder="your.email@example.com"
+                  >
+                </div>
+
+                <div>
+                  <label for="company" class="block text-sm font-semibold text-midnight-violet-900 mb-2">
+                    Company (optional)
+                  </label>
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    class="w-full px-4 py-3 border border-pale-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-blue-500 focus:border-transparent"
+                    placeholder="Your company name"
+                  >
+                </div>
+
+                <div>
+                  <label for="message" class="block text-sm font-semibold text-midnight-violet-900 mb-2">
+                    Message <span class="text-red-600">*</span>
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="6"
+                    required
+                    class="w-full px-4 py-3 border border-pale-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-blue-500 focus:border-transparent resize-none"
+                    placeholder="Tell us about your HR needs or ask us a question..."
+                  ></textarea>
+                </div>
+
+                <!-- Privacy Notice -->
+                <div class="bg-midnight-violet-50 rounded-lg p-4">
+                  <p class="text-sm text-midnight-violet-700">
+                    <svg class="w-5 h-5 text-slate-blue-600 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                    </svg>
+                    We will only use your details to respond to your enquiry. We respect your privacy and will never share your information with third parties.
+                  </p>
+                </div>
+
+                <button
+                  type="submit"
+                  class="w-full btn-primary py-4 text-lg"
+                >
+                  Send Message
+                </button>
+
+              </form>
+
+              <!-- Alternative Contact -->
+              <div class="mt-8 text-center">
+                <p class="text-midnight-violet-700 mb-3">Prefer to speak directly?</p>
+                <a href="./book-a-call.html" class="text-slate-blue-600 font-semibold hover:text-slate-blue-700">
+                  Book a call instead →
+                </a>
+              </div>
+
+            </div>
+
+            <!-- Right Column: Contact Details and Information -->
+            <div>
+              <h2 class="text-2xl font-bold text-midnight-violet-900 mb-6">Contact Details</h2>
+
+              <div class="space-y-6">
+
+                <!-- Email -->
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 w-12 h-12 bg-slate-blue-100 rounded-lg flex items-center justify-center mr-4">
+                    <svg class="w-6 h-6 text-slate-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="font-semibold text-midnight-violet-900 mb-1">Email</h3>
+                    <a href="mailto:hello@example.co.uk" class="text-slate-blue-600 hover:text-slate-blue-700">
+                      hello@example.co.uk
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Phone -->
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 w-12 h-12 bg-slate-blue-100 rounded-lg flex items-center justify-center mr-4">
+                    <svg class="w-6 h-6 text-slate-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="font-semibold text-midnight-violet-900 mb-1">Phone</h3>
+                    <a href="tel:02030000000" class="text-slate-blue-600 hover:text-slate-blue-700">
+                      0203 000 0000
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Service Area -->
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 w-12 h-12 bg-slate-blue-100 rounded-lg flex items-center justify-center mr-4">
+                    <svg class="w-6 h-6 text-slate-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="font-semibold text-midnight-violet-900 mb-1">Service Area</h3>
+                    <p class="text-midnight-violet-700">UK-wide, with local focus</p>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Response Time -->
+              <div class="mt-8 bg-midnight-violet-50 rounded-lg p-6">
+                <h3 class="font-semibold text-midnight-violet-900 mb-3 flex items-center">
+                  <svg class="w-5 h-5 text-slate-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                  Response Time
+                </h3>
+                <p class="text-midnight-violet-700">
+                  We aim to respond to all enquiries within one business day. For urgent matters, please call us directly.
+                </p>
+              </div>
+
+              <!-- What Happens Next -->
+              <div class="mt-8">
+                <h3 class="font-semibold text-midnight-violet-900 mb-4">What Happens Next?</h3>
+                <ol class="space-y-3">
+                  <li class="flex items-start">
+                    <span class="flex-shrink-0 w-6 h-6 bg-slate-blue-600 text-white rounded-full flex items-center justify-center text-sm font-semibold mr-3 mt-0.5">1</span>
+                    <span class="text-midnight-violet-700">We'll review your message and respond within one business day</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="flex-shrink-0 w-6 h-6 bg-slate-blue-600 text-white rounded-full flex items-center justify-center text-sm font-semibold mr-3 mt-0.5">2</span>
+                    <span class="text-midnight-violet-700">If appropriate, we'll arrange a brief call to discuss your needs in detail</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="flex-shrink-0 w-6 h-6 bg-slate-blue-600 text-white rounded-full flex items-center justify-center text-sm font-semibold mr-3 mt-0.5">3</span>
+                    <span class="text-midnight-violet-700">We'll outline how we can support you and discuss next steps</span>
+                  </li>
+                </ol>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQs Section -->
+    <section class="py-16 md:py-20 bg-midnight-violet-50">
+      <div class="container-custom">
+        <div class="max-w-3xl mx-auto">
+          <h2 class="text-3xl font-bold text-midnight-violet-900 mb-8 text-center">Before You Contact Us</h2>
+
+          <div class="space-y-4">
+
+            <details class="bg-white rounded-lg p-6">
+              <summary class="font-semibold text-lg text-midnight-violet-900 cursor-pointer">
+                What information should I include in my message?
+              </summary>
+              <p class="mt-4 text-midnight-violet-700">
+                Share as much or as little as you're comfortable with. Typically, it's helpful to mention your team size, the nature of your HR challenge or question, and what you're hoping to achieve. This helps us provide a more tailored response.
+              </p>
+            </details>
+
+            <details class="bg-white rounded-lg p-6">
+              <summary class="font-semibold text-lg text-midnight-violet-900 cursor-pointer">
+                Do you offer free initial consultations?
+              </summary>
+              <p class="mt-4 text-midnight-violet-700">
+                Yes, we offer free discovery calls where we can discuss your needs in detail and outline how we might support you. There's no obligation, and it's a great opportunity to see if we're the right fit for your business.
+              </p>
+            </details>
+
+            <details class="bg-white rounded-lg p-6">
+              <summary class="font-semibold text-lg text-midnight-violet-900 cursor-pointer">
+                Can you help with urgent HR matters?
+              </summary>
+              <p class="mt-4 text-midnight-violet-700">
+                Yes. If you have an urgent matter, please mention this in your message or call us directly. We prioritize urgent employee relations issues and can often provide same-day support when needed.
+              </p>
+            </details>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-midnight-violet-900 text-midnight-violet-100 py-12">
+    <div class="container-custom">
+      <div class="grid md:grid-cols-3 gap-8 mb-8">
+
+        <div>
+          <h3 class="text-xl font-bold text-white mb-4">HR Solutions</h3>
+          <p class="text-midnight-violet-200">
+            Expert HR consultancy for growing UK businesses.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-white mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="./index.html" class="hover:text-white transition-colors">Home</a></li>
+            <li><a href="./services.html" class="hover:text-white transition-colors">Services</a></li>
+            <li><a href="./about.html" class="hover:text-white transition-colors">About</a></li>
+            <li><a href="./team.html" class="hover:text-white transition-colors">Team</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-white mb-4">Contact</h4>
+          <ul class="space-y-2">
+            <li>
+              <a href="mailto:hello@example.co.uk" class="hover:text-white transition-colors">
+                hello@example.co.uk
+              </a>
+            </li>
+            <li>
+              <a href="tel:02030000000" class="hover:text-white transition-colors">
+                0203 000 0000
+              </a>
+            </li>
+            <li class="text-midnight-violet-200">UK-wide service</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="border-t border-midnight-violet-800 pt-8 text-center text-midnight-violet-300 text-sm">
+        <p>&copy; 2025 HR Solutions. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+      mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>
