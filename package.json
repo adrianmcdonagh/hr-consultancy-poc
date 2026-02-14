@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "HR Consultancy proof-of-concept website",
   "scripts": {
-    "dev": "tailwindcss -i ./css/input.css -o ./css/output.css --watch",
-    "build": "tailwindcss -i ./css/input.css -o ./css/output.css --minify"
+    "dev": "tailwindcss -i ./css/input.css -o ./deploy/css/output.css --watch",
+    "build": "tailwindcss -i ./css/input.css -o ./deploy/css/output.css --minify && npm run copy:js",
+    "copy:js": "mkdir -p ./deploy/js && cp -f ./js/motion.js ./deploy/js/motion.js"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.1"
